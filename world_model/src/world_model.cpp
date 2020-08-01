@@ -14,7 +14,7 @@ nubot::World_Model::World_Model(int argc,char** argv,const char * name)
     std::string num = robot_name.substr(robot_name.size()-1);
     std::string robot_prefix = robot_name.substr(0,robot_name.size()-1);
     environment = num.c_str();
-    ROS_FATAL("world_model: robot_name:%s",robot_name.c_str());
+    // ROS_FATAL("world_model: robot_name:%s",robot_name.c_str());
     nh = boost::make_shared<ros::NodeHandle>(robot_name);
     std::string info_topic = "/" + robot_prefix + "/receive_from_coach";
     std::string strategy_topic = "/" + robot_prefix + "/nubotcontrol/strategy";
